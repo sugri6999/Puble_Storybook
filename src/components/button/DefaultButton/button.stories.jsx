@@ -35,106 +35,105 @@ import Icon from "../../Icon/index";
  */
 
 const ButtonStory = {
-  title: "Components/Button/Button",
-  component: Button,
-  parameters: {
-    layout: "centered",
-  },
+    title: "Components/Button/Button",
+    component: Button,
+    parameters: {
+        layout: "centered",
+    },
 
-  tags: ["autodocs"],
+    tags: ["autodocs"],
 
-  argTypes: {
-    type: {
-      control: "select",
-      options: ["button", "submit"],
-      description: "버튼타입 입니다.",
-      defaultValue: { summary: "button" },
-      type: { summary: "string", required: false },
+    argTypes: {
+        type: {
+            control: "select",
+            options: ["button", "submit"],
+            description: "버튼타입 입니다.",
+            defaultValue: { summary: "button" },
+            type: { summary: "string", required: false },
+        },
+        children: {
+            description: "버튼 자식요소에 배치될 요소 입니다",
+        },
+        variant: {
+            control: "select",
+            options: ["primary", "secondary", "outlined"],
+            description: "버튼 스타일타입 입니다.",
+            defaultValue: { summary: "primary" },
+            type: { summary: "string", required: false },
+        },
+        size: {
+            control: "radio",
+            options: ["sm", "md", "lg"],
+            description: "사이즈 입니다.",
+            defaultValue: { summary: "sm" },
+            // type: { summary: "string", required: false },
+        },
+        disabled: {
+            control: "boolean",
+            description: "버튼 disabled 여부입니다.",
+            defaultValue: { summary: false },
+            type: { summary: "boolean", required: false },
+        },
+        startIcon: {
+            control: null,
+            description: "버튼 자식요소 앞에 배치될 아이콘 입니다",
+            defaultValue: { summary: undefined },
+        },
+        endIcon: {
+            control: null,
+            description: "버튼 자식요소 뒤에 배치될 아이콘 입니다",
+            defaultValue: { summary: undefined },
+        },
+        onClick: {
+            control: "text",
+            description: "버튼 클릭 메소드 입니다.",
+            action: "onClick",
+            type: { summary: "function", required: false },
+        },
     },
-    children: {
-      description: "버튼 자식요소에 배치될 요소 입니다",
-    },
-    variant: {
-      control: "select",
-      options: ["primary", "secondary", "outlined"],
-      description: "버튼 스타일타입 입니다.",
-      defaultValue: { summary: "primary" },
-      type: { summary: "string", required: false },
-    },
-    size: {
-      control: "radio",
-      options: ["sm", "md", "lg"],
-      description: "사이즈 입니다.",
-      defaultValue: { summary: "sm" },
-      // type: { summary: "string", required: false },
-    },
-    disabled: {
-      control: "boolean",
-      description: "버튼 disabled 여부입니다.",
-      defaultValue: { summary: false },
-      type: { summary: "boolean", required: false },
-    },
-    startIcon: {
-      control: null,
-      description: "버튼 자식요소 앞에 배치될 아이콘 입니다",
-      defaultValue: { summary: undefined },
-    },
-    endIcon: {
-      control: null,
-      description: "버튼 자식요소 뒤에 배치될 아이콘 입니다",
-      defaultValue: { summary: undefined },
-    },
-    onClick: {
-      control: "text",
-      description: "버튼 클릭 메소드 입니다.",
-      action: "onClick",
-      type: { summary: "function", required: false },
-    },
-  },
 };
 
 export default ButtonStory;
 
 const handleOnclick = () => {
-  alert("버튼입니다");
+    alert("버튼입니다");
 };
 
 export const Default = {
-  args: {
-    children: "버튼",
-    onClick: handleOnclick,
-  },
+    args: {
+        children: "버튼",
+        onClick: handleOnclick,
+    },
 };
 
 
 export const DefaultDark = {
-  args: {
-    children: "버튼",
-    onClick: handleOnclick,
-  },
+    args: {
+        children: "버튼",
+        onClick: handleOnclick,
+    },
 };
 
 export const Disabled = {
-  args: {
-    children: "버튼",
-    onClick: handleOnclick,
-    disabled: true,
-  },
+    args: {
+        children: "버튼",
+        onClick: handleOnclick,
+        disabled: true,
+    },
 };
 
 export const StartIcon = {
-  args: {
-    children: "버튼",
-    onClick: handleOnclick,
-    startIcon: <Icon icon={"example"} width={16} height={16} />,
-  },
+    args: {
+        children: "버튼",
+        onClick: handleOnclick,
+        startIcon: <Icon icon={"example"} width={16} height={16} />,
+    },
 };
 
 export const EndIcon = {
-  args: {
-    children: "버튼",
-    onClick: handleOnclick,
-    endIcon: <Icon icon={"example"} width={16} height={16} />,
-  },
+    args: {
+        children: "버튼",
+        onClick: handleOnclick,
+        endIcon: <Icon icon={"example"} width={16} height={16} />,
+    },
 };
-

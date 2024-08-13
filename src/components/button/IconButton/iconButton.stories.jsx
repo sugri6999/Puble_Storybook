@@ -1,5 +1,3 @@
-import React from "react";
-
 import IconButton from "./index";
 
 /**
@@ -28,53 +26,53 @@ import IconButton from "./index";
  */
 
 const IconButtonStory = {
-  title: "Components/Button/IconButton",
-  component: IconButton,
-  parameters: {
-    layout: "centered",
-  },
+    title: "Components/Button/IconButton",
+    component: IconButton,
+    parameters: {
+        layout: "centered",
+    },
 
-  tags: ["autodocs"],
+    tags: ["autodocs"],
 
-  argTypes: {
-    width: {
-      control: "number",
-      description: "Icon Width 입니다.",
-      defaultValue: { summary: 18 },
-      type: { summary: "number", required: false },
+    argTypes: {
+        width: {
+            control: "number",
+            description: "Icon Width 입니다.",
+            defaultValue: { summary: 18 },
+            type: { summary: "number", required: false },
+        },
+        height: {
+            control: "number",
+            description: "Icon Height 입니다.",
+            defaultValue: { summary: 18 },
+            type: { summary: "number", required: false },
+        },
+        icon: {
+            control: "text",
+            description: "Icon 명 입니다.",
+            defaultValue: { summary: undefined },
+            type: { summary: "string", required: true },
+        },
+        onClick: {
+            control: "function",
+            description: "Icon 클릭 이벤트 입니다.",
+            defaultValue: { summary: undefined },
+            type: { summary: "function", required: false },
+        },
     },
-    height: {
-      control: "number",
-      description: "Icon Height 입니다.",
-      defaultValue: { summary: 18 },
-      type: { summary: "number", required: false },
-    },
-    icon: {
-      control: "text",
-      description: "Icon 명 입니다.",
-      defaultValue: { summary: undefined },
-      type: { summary: "string", required: true },
-    },
-    onClick: {
-      control: "function",
-      description: "Icon 클릭 이벤트 입니다.",
-      defaultValue: { summary: undefined },
-      type: { summary: "function", required: false },
-    },
-  },
 };
 
 export default IconButtonStory;
 
 const handleOnclick = () => {
-  alert("버튼입니다");
+    alert("버튼입니다");
 };
 
 export const Default = {
-  args: {
-    width: 20,
-    height: 20,
-    icon: "example",
-    onClick: handleOnclick,
-  },
+    args: {
+        width: 20,
+        height: 20,
+        icon: "example",
+        onClick: handleOnclick,
+    },
 };

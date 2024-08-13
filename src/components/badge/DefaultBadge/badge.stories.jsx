@@ -23,34 +23,34 @@ import Icon from "../../Icon/index";
  */
 
 const BadgeStory = {
-  title: "Components/Badge/Badge",
-  component: Badge,
-  parameters: {
-    layout: "centered",
-  },
-
-  tags: ["autodocs"],
-
-  argTypes: {
-    // props 명
-    count: {
-      control: "text",
-      description: "건수 입니다.",
-      defaultValue: { summary: undefined },
-      type: { summary: "", required: true },
+    title: "Components/Badge/Badge",
+    component: Badge,
+    parameters: {
+        layout: "centered",
     },
-    children: {
-      description: "보여질 icon요소 입니다",
+
+    tags: ["autodocs"],
+
+    argTypes: {
+        // props 명
+        count: {
+            control: "text",
+            description: "건수 입니다.",
+            defaultValue: { summary: undefined },
+            type: { summary: "", required: true },
+        },
+        children: {
+            description: "보여질 icon요소 입니다",
+        },
     },
-  },
 };
 
 export default BadgeStory;
 
 export const Default = () => {
-  return (
-    <Badge count={3}>
-      <Icon icon={"bell"} width={40} height={40} />
-    </Badge>
-  );
+    return (
+        <Badge count={3}>
+            <Icon icon={"bell"} width={40} height={40} />
+        </Badge>
+    );
 };

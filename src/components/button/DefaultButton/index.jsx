@@ -2,21 +2,20 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 const Button = ({ type, variant, size, disabled, onClick, startIcon, endIcon, children }) => {
-
-  return (
-    <CustomButton
-      type={type || 'button'}
-      className={'btn'}
-      onClick={onClick}
-      disabled={!!disabled}
-      $variant={variant || 'primary'}
-      $size={size || 'sm'}
-    >
-      {startIcon && <span className='icon-wrap start'>{startIcon}</span>}
-      {children}
-      {endIcon && <span className='icon-wrap end'>{endIcon}</span>}
-    </CustomButton>
-  );
+    return (
+        <CustomButton
+            type={type || 'button'}
+            className={'btn'}
+            onClick={onClick}
+            disabled={!!disabled}
+            $variant={variant || 'primary'}
+            $size={size || 'sm'}
+        >
+            {startIcon && <span className='icon-wrap start'>{startIcon}</span>}
+            {children}
+            {endIcon && <span className='icon-wrap end'>{endIcon}</span>}
+        </CustomButton>
+    );
 };
 
 export default Button;
