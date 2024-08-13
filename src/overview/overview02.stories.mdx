@@ -1,0 +1,130 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="overview/코드 및 컴포넌트 스타일링" />
+
+# 코드 및 컴포넌트 스타일링
+
+<br />
+<br />
+## 컴포넌트명,클래스명 규칙
+<br />
+
+> #### 컴포넌트명 작성 시 파스칼 케이스(PascalCase)로 작성한다.
+
+```javascript
+const Button = () => {
+    return <button type="button">버튼</button>;
+};
+
+export default Button;
+```
+
+> #### className 작성 시 케밥 케이스(kebab-case)로 작성한다.
+
+```html
+<Card className="line-type">
+    <ImgBox className="red-title"></ImgBox>
+    <Text className="blue-text"></Text>
+</Card>
+```
+
+<br />
+## 기타 명명 규칙
+
+```javascript
+
+// 상수는 영문 대문자, 스네이크 표기법을 사용
+const NAME_ROLE;
+
+// 배열: 복수형 이름으로 사용
+const datas = [];
+
+// 정규표현식: 'r'로 시작
+const = rName = /.*/;
+
+// 반환 값이 불린인 경우: 'is'로 시작
+const isLoading = false;
+
+```
+
+<br />
+## 컴포넌트 작성 규칙
+<br />
+
+> #### 컴포넌트 작성시 화살표 함수를 사용해야 한다.
+
+```jsx
+const Button = () => {
+    return <button type="button">버튼</button>;
+};
+
+export default Button;
+```
+
+<br />
+## CSS 속성 선언 순서
+
+```
+
+1. 포지셔닝
+
+position, top, left 등
+
+2. display
+
+display, justify-content, align-items(self) flex 관련 스타일
+
+3. 박스모델
+
+(max/min)width, (max/min)height, margin, padding, border, background
+
+4. 글자
+
+font-size, color, text-align, white-space, word-break, text-indent
+
+5. 기타
+
+animation, transition
+
+6. 넘침,흐름,투명도,표시여부,layer level
+
+overflow, opacity, visibility, z-index
+
+```
+
+<br />
+## 이벤트 핸들러 네이밍
+<br />
+
+> #### 이벤트 핸들러 함수의 이름은 `handle`로 시작해야 한다.
+
+```jsx
+const Button = ({ onClick }) => {
+    const handleClick = () => {
+        if (onClick) {
+            onClick();
+        }
+    };
+
+    return (
+        <button type="button" onClick={handleClick}>
+            버튼
+        </button>
+    );
+};
+```
+
+<br />
+## 상태 관리 규칙
+<br />
+
+> #### 상태 변수명은 `is`, `has`, `should` 등의 접두어를 사용하여 상태의 의도를 명확히 해야 한다.
+
+```javascript
+const [isLoading, setIsLoading] = useState(false);
+const [hasError, setHasError] = useState(false);
+```
+
+```
+
+```

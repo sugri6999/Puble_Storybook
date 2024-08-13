@@ -1,0 +1,79 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="overview/프로젝트 및 파일 구조" />
+
+# 프로젝트 및 파일 구조
+
+<br />
+<br />
+## 퍼블리싱 규칙
+<br />
+
+#### - 웹 표준 가이드를 준수하여 퍼블리싱하는 것을 기본으로 한다.
+
+#### - React 프로젝트 생성은 기본 CRA 프로젝트로 생성하며, 요청이 있을시 Vite 프로젝트 생성.
+
+#### - 스타일링은 내부적으로 Styled-Components를 사용하며 프로젝트 협업시 SCSS 사용 가능.
+
+#### - inline style 을 지양하며 필요한 Case 만 사용한다.
+
+#### - Slide는 기본적으로 Swiper.js 를 사용하며 디자인 구현 불가시 이 외 slide 사용.
+
+<br />
+## 폴더 구조
+
+```
+📦public
+ ┣ 📂img
+📦src
+ ┣ 📂assets
+ ┃ ┗ 📂font
+ ┣ 📂components
+ ┃ ┗ 📂 // 컴포넌트 명
+ ┃     ┗ 📜index.jsx
+ ┃ ┗ 📂 // 컴포넌트 명
+ ┃     ┗ 📜index.jsx
+ ┣ 📂hooks  // hooks
+ ┣ 📂pages  // 각 페이지
+ ┣ 📂stores  // 전역 상태 폴더
+ ┣ 📂types   // typescript 따로 쓸경우 정의한 type
+ ┣ 📂api      // api 목록들
+ ┣ 📂lib       // 그 외 것
+ ┣ 📂styles   // 스타일 분리시 생성
+ ┃ ┣ 📂css
+ ┃ ┗ 📂scss
+ ┣ 📜App.css
+ ┣ 📜App.jsx
+ ┗ 📜main.jsx
+```
+
+<br />
+## 파일 명 규칙
+<br />
+
+> #### 컴포넌트 폴더 명은 파스칼 케이스(PascalCase)로 작성한다.
+
+```bash
+Header
+Card
+ToggleButton
+RegisterButton
+```
+
+> #### 컴포넌트 폴더 내부 JSX 파일명은 index.jsx로 통일힌다.
+
+```
+ ┣ 📂components
+ ┃ ┗ 📂 ToggleButton
+ ┃     ┗ 📜index.jsx
+ ┃ ┗ 📂 Header
+ ┃     ┗ 📜index.jsx
+```
+
+> #### Custom Hook 파일명은 use로 시작하며 카멜 케이스(camelCase)로 작성한다.
+
+```
+useTab
+usePopup
+useModal
+```
