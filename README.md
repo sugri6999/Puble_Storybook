@@ -52,11 +52,11 @@ npm run storybook
 For Yarn users:
      
 ```shell
-$ yarn add
+yarn add
 ```
   
 ```shell
-$ yarn storybook
+yarn storybook
 ```
 
 ## 🧩 컴포넌트 사용하기
