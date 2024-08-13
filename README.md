@@ -6,7 +6,7 @@
      </a>
 </p>
 
-<h1 align="center">O2UX Component Guide Storybook ⚡️</h1>
+<h1 align="center">Component Guide Storybook ⚡️</h1>
 
 
 <!-- <p align="center">
