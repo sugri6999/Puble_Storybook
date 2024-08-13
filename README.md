@@ -35,6 +35,14 @@
 
 ## 📚 설치
 
+Git Bash로 레포지토리 클론
+
+```shell
+git clone https://github.com/username/repository.git
+```
+
+
+
 For npm users:
 
 ```shell
