@@ -1,5 +1,3 @@
-# Puble_Storybook
-
 <p align="center">
   <a href="https://6507e7501b32dcd4d7127903-voiyrkvnku.chromatic.com/">
      <img src="./.storybook/o2ux-logo-sm.svg" alt="o2ux logo" width="300" />

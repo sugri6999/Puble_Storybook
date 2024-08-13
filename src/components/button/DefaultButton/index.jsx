@@ -21,48 +21,39 @@ const Button = ({ type, variant, size, disabled, onClick, startIcon, endIcon, ch
 
 export default Button;
 
-const CustomButton = styled.button`
+const CustomButton = styled.button` 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 8px;
+    border: solid black;
+    color : black;
+    font-size: 12px;
  
- display: flex;
- align-items: center;
- justify-content: center;
- padding: 2px 8px;
- border: solid black;
- color : black;
- font-size: 12px;
-
- 
- &:disabled {
-      cursor: unset;
+    &:disabled {
+        cursor: unset;
     }
 
-
- // !! variant
- ${(props) =>
-    props.$variant === 'primary' &&
-    css`
-    `}
-
-  ${(props) =>
-    props.$variant === 'secondary' &&
-    css`
-    `}
-
-  ${(props) =>
-    props.$variant === 'outlined' &&
-    css`
-    `}
-
-  // !! size 
+    // !! variant
     ${(props) =>
-    props.$size === 'md' &&
-    css`
-
+        props.$variant === 'primary' && css`
     `}
-  ${(props) =>
-    props.$size === 'lg' &&
-    css`
 
+    ${(props) =>
+        props.$variant === 'secondary' && css`
+        border: 1px solid #000;
     `}
- 
+
+    ${(props) =>
+        props.$variant === 'outlined' && css`
+    `}
+
+    // !! size 
+    ${(props) =>
+        props.$size === 'md' && css`
+    `}
+
+    ${(props) =>
+        props.$size === 'lg' && css`
+    `} 
 `;
