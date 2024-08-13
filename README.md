@@ -38,27 +38,26 @@
 For npm users:
 
 ```shell
-  $ npm install --save
+npm install --save
 ```
 
 
 
 ```shell
-  $ npm run storybook 
+npm run storybook 
 ```
 
  or
 
- For Yarn users:
+For Yarn users:
      
-   ```shell
-      $ yarn add
-   ```
+```shell
+$ yarn add
+```
   
-
-   ```shell
-     $ yarn storybook
-   ```
+```shell
+$ yarn storybook
+```
 
 ## 🧩 컴포넌트 사용하기
 
