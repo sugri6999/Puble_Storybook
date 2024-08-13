@@ -38,7 +38,7 @@
 Git Bash로 레포지토리 클론
 
 ```shell
-git clone https://github.com/username/repository.git
+git clone https://github.com/sugri6999/Puble_Storybook.git
 ```
 
 
